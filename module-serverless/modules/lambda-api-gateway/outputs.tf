@@ -1,5 +1,5 @@
 output "api_gateway_arn" {
-  value = aws_api_gateway_rest_api.lambda_api_gateway[0].arn
+  value       = aws_api_gateway_rest_api.lambda_api_gateway[0].arn
   description = "The API Gateway arn."
 }
 

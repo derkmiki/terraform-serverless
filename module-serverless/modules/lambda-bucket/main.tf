@@ -1,11 +1,11 @@
 terraform {
-    required_version = "~> 1.9.2"
-    required_providers {
-      aws = {
-        source = "hashicorp/aws"
-        version = "~> 5.64.0"
-      }
+  required_version = "~> 1.9.2"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.64.0"
     }
+  }
 }
 
 provider "aws" {
@@ -14,7 +14,7 @@ provider "aws" {
 
 resource "aws_s3_bucket" "lambda_bucket" {
   bucket = "${var.prefix}-lambda-bucket-${var.suffix}"
-  tags = var.tags
+  tags   = var.tags
 }
 
 resource "aws_s3_bucket_public_access_block" "lambda_bucket" {

@@ -1,4 +1,4 @@
-#Lambda API Gateway
+# Lambda API Gateway
 
 This module is resposible for creating api gateway and triggering lambda function
 

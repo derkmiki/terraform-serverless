@@ -1,13 +1,12 @@
 terraform {
-    required_version = "~> 1.9.2"
-    required_providers {
-      aws = {
-        source = "hashicorp/aws"
-        version = "~> 5.64.0"
-      }
+  required_version = "~> 1.9.2"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.64.0"
     }
+  }
 }
-
 
 provider "aws" {
   region = var.region
@@ -31,6 +30,6 @@ resource "aws_iam_role" "lambda_role" {
 
 resource "aws_iam_role_policy_attachment" "lambda_role" {
   role       = aws_iam_role.lambda_role.name
-  for_each = toset(var.policy_arn)
+  for_each   = toset(var.policy_arn)
   policy_arn = each.value
 }

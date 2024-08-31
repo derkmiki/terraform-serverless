@@ -20,7 +20,7 @@ variable "source_dir" {
 
 
 variable "region" {
-  default = "us-east-1"
-  type = string
-   description = "AWS resources region." 
+  default     = "us-east-1"
+  type        = string
+  description = "AWS resources region."
 }

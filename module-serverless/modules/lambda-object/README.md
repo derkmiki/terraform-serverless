@@ -1,4 +1,4 @@
-#Lambda Object
+# Lambda Object
 
 This module is resposible for zipping lambda source and uploading to S3.
 

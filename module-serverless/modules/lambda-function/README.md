@@ -1,4 +1,4 @@
-#Lambda function
+# Lambda function
 
 This module is resposible for creating the lambda function.
 

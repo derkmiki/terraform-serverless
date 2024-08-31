@@ -1,4 +1,4 @@
 output "role_arn" {
-    value =   aws_iam_role.lambda_role.arn
-    description = "AWS arn of created lambda iam role."
+  value       = aws_iam_role.lambda_role.arn
+  description = "AWS arn of created lambda iam role."
 }

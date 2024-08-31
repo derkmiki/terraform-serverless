@@ -1,5 +1,5 @@
 variable "include_api_gateway" {
-  type = bool
+  type        = bool
   description = "To include api gateway for the lambda function/"
 }
 
@@ -11,7 +11,7 @@ variable "prefix" {
 variable "name" {
   type        = string
   description = "The name of resource."
-  default = "hello-world"
+  default     = "hello-world"
 }
 
 variable "tags" {
@@ -26,12 +26,12 @@ variable "environment" {
 }
 
 variable "lambda_function_invoke_arn" {
- type = string
- description = "Lambda function invoke arn." 
+  type        = string
+  description = "Lambda function invoke arn."
 }
 
 variable "region" {
-  default = "us-east-1"
-  type = string
-   description = "AWS resources region." 
+  default     = "us-east-1"
+  type        = string
+  description = "AWS resources region."
 }
