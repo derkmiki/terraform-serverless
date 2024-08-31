@@ -25,9 +25,9 @@ module "lambda_api_gateway" {
 Note the following parameters:
 
 * `prefix`: The prefix to be added to the resource name.
-* 
+
 * `include_api_gateway`: true, to create api gateway.
-* 
+
 * `name`: The name of resource.
 
 * `tags`: Resource tags.

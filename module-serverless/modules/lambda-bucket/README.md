@@ -26,7 +26,7 @@ module "lambda_bucket" {
 Note the following parameters:
 
 * `prefix`: The prefix to be added to the lambda bucket.
-* 
+
 * `suffix`: The suffix to be added to the lambda bucket.
 
 * `tags`: Resource tags.

@@ -34,5 +34,5 @@ Note the following parameters:
 Provided outputs:
 
 * `s3_object_key`: The object key for the lambda file path.
-* 
+
 * `source_code_hash`: The hash code for the lambda zip file.

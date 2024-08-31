@@ -44,5 +44,5 @@ Note the following parameters:
 Provided outputs:
 
 * `function_name`: The lambda function name.
-* 
-* `function_name`: The lambda function invoke arn.
+
+* `function_invoke_arn`: The lambda function invoke arn.
