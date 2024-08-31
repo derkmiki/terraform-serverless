@@ -13,27 +13,25 @@ resource "aws_s3_object" "lambda_function_hello_world_s3_object" {
 }
 
 resource "aws_lambda_function" "lambda_function_hello_world" {
-  function_name = "${local.name}-hello-world"
-  runtime       = "nodejs20.x"
-  handler       = "main.handler"
-  role          = aws_iam_role.lambda_role.arn
-
+  function_name    = "${local.name}-hello-world"
+  runtime          = "nodejs20.x"
+  handler          = "main.handler"
+  role             = aws_iam_role.lambda_role.arn
   s3_bucket        = aws_s3_bucket.lambda_bucket.id
   s3_key           = aws_s3_object.lambda_function_hello_world_s3_object.key
   source_code_hash = data.archive_file.lambda_function_hello_world_zip.output_base64sha256
 }
 
 resource "aws_cloudwatch_log_group" "lambda_function_hello_world_cw_group" {
-    name = "/aws/lambda/${local.name}-hello-world"
-    retention_in_days = 3
+  name              = "/aws/lambda/${local.name}-hello-world"
+  retention_in_days = 3
 }
 
-
 resource "aws_lambda_permission" "lambda_function_hello_world" {
-  statement_id = "AllowAPIGatewayInvoke"
-  action = "lambda:InvokeFunction"
+  statement_id  = "AllowAPIGatewayInvoke"
+  action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.lambda_function_hello_world.function_name
-  principal = "apigateway.amazonaws.com"
-  source_arn = "${aws_api_gateway_rest_api.lambda_api_gateway.execution_arn}/*/*"
+  principal     = "apigateway.amazonaws.com"
+  source_arn    = "${aws_api_gateway_rest_api.lambda_api_gateway.execution_arn}/*/*"
 }
 

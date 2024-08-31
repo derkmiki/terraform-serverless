@@ -1,19 +1,19 @@
 variable "aws_region" {
   default = "us-east-1"
-  type = string
+  type    = string
 }
 
 variable "environment" {
   default = "dev"
-  type = string
+  type    = string
 }
 
 variable "department" {
   default = "hr"
-  type = string
+  type    = string
 }
 
 variable "suffix" {
   default = "eaf"
-  type = string
+  type    = string
 }
