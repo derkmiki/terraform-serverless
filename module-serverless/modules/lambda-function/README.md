@@ -39,7 +39,7 @@ Note the following parameters:
 
 * `source_code_hash`: The source code hash for lambda function.
 
-* `regions`: AWS resources region.
+* `region`: AWS resources region.
 
 Provided outputs:
 
